@@ -1,0 +1,36 @@
+# @number of points for different trajectories
+n_traj : 2000
+
+# @horizon
+H : 100
+
+# @auto-selection of domain
+uniform_domain : True
+eps : 0
+num_eps : 10
+represent_nrow : 10
+
+
+# appoint bandwidth
+reference : [0.35,0.4,0.45,0.55,0.6, 0.65]
+
+
+# new_reject_sampling_size
+batch_size : 50   #cannot be less than 100
+sample_eps : 0.35
+sample_reference : [0.35,0.6, 1] #when perform reject sampling, we only sample in such range
+num : 30  # point used to calculate the upper bound 
+
+# test_why_reject_sampling_don't_work
+test_rs : True
+test_step : 0
+
+# if_diffusion
+diffusion : False
+
+#set_policy
+tau_pi : 0.5
+tau_mu : 0.52
+
+#directory
+after_sample_dir : "/sample_we_draw_optimal_policy"
